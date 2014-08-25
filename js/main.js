@@ -10,13 +10,10 @@ $(document).ready(function(){
       $.ajax({
         type: 'POST',
         crossDomain: true,
-        url: 'http://www.zuoyouba.com/sub_emails',
+        url: 'http://zuoyouba.com/sub_emails',
         data: { "email" : email } ,
         dataType: 'json',
-        success: function(responseData, textStatus, jqXHR) {
-          var value = responseData.someKey;
-        },
-        error: function() {
+        success: function(responseData) {
           $('#email').val("")
           $('.alert').removeClass('hide')
         }
