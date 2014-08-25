@@ -16,7 +16,7 @@ $(document).ready(function(){
         success: function(responseData, textStatus, jqXHR) {
           var value = responseData.someKey;
         },
-        error: function(a, b, c) {
+        error: function() {
           $('#email').val("")
           $('.alert').removeClass('hide')
         }
